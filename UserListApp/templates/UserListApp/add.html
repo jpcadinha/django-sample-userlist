@@ -1,0 +1,11 @@
+<form action="{% url 'UserListApp:add' %}" method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h1>Add username form</h1></legend>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            <label>Username:</label><br>
+            <input type="text" name="username"/>
+            <input type="submit" value="add">
+    </fieldset>
+    <a href=".."> Return to user list</a>
+    </form>
